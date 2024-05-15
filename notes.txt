@@ -1,0 +1,12 @@
+localhost:4000/api/register
+username
+useremail
+userpassword
+
+localhost:4000/api/register/otp
+useremail
+userotp
+
+localhost:4000/api/login
+useremail
+userpassword
