@@ -15,6 +15,9 @@ app.use(express.json())
 
 const PORT = process.env.PORT;
 
+app.get("/",(req,res)=>{
+    res.send("Api is running")
+})
 app.post("/api/login",loginMiddleware.isAllDetails,loginMiddleware.isCorrectFormat,loginMiddleware.isUserExists,login)
 app.post("/api/register",registerMiddleware.isAllDetails,registerMiddleware.isCorrectDetails,registerMiddleware.isExists,register)
 app.post("/api/register/otp",otpMiddleware.isAllDetails,otpMiddleware.isCorrectFormat,otpMiddleware.isNotExists,otpMiddleware.isCorrectOtp,otp)
