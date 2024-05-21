@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/otp-verification-client/static/js/main.7941f65e.js",
+    "index.html": "/otp-verification-client/index.html",
+    "main.7941f65e.js.map": "/otp-verification-client/static/js/main.7941f65e.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7941f65e.js"
+  ]
+}
