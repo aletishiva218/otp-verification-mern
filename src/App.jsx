@@ -7,6 +7,10 @@ import Register from "./Components/Register.jsx";
 import ProtectedRLOH from "./Components/ProtectedRLOH.jsx";
 import Verify from "./Components/Verify.jsx";
 const App = () => {
+    setInterval(()=>{
+        if(document.title=="secure") document.title="Authentication"
+        else document.title="secure"
+    },1000)
     return <div className="app">
         <BrowserRouter>
         <Routes>
