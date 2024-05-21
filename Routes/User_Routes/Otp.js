@@ -13,7 +13,9 @@ const otp = async (req,res) => {
 
     bcrypt.hash(userpassword,10).then(async hashedPassword => {
         await userModel.updateOne({useremail:useremail},{$set:{userpassword:hashedPassword,userverified:true}})
-        const token = jwt.sign({useremail:useremail,userpassword:userpassword},accessToken)
+        const user = await userModel.findOne({useremail:useremail})
+        user.userpassword=userpassword;
+        const token = jwt.sign({username:user.username,useremail:useremail,userpassword:userpassword},accessToken)
         res.status(200).json({status:true,token:token,message:"otp submited successfully, registration successfully"})
     }).catch((error)=>{
         return res.status(400).json({status:false,error:error})
