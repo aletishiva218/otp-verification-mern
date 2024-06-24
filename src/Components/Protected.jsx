@@ -7,7 +7,7 @@ const Protected = (props) => {
     useEffect(()=>{
         const token = Cookies.get("token")
         if(!token)
-            navigate("/")
+            return   navigate("/")
     },[navigate])
     return Component;
 }

@@ -10,6 +10,8 @@ const Welcome = () => {
   const navigate = useNavigate()
   useEffect(() => {
     const token = Cookies.get("token");
+    if(!token)
+      return navigate("/")
     const user = jwtDecode(token);
     setUser(user);
   }, []);
