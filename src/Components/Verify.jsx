@@ -31,7 +31,7 @@ const Verify = () => {
         }
       }
       useEffect(()=>{
-        const API_URL = "https://otp-verification-server-6rwu.onrender.com/api/";
+        const API_URL = "https://otp-verification-mern-fl0a.onrender.com/api/";
     const useremail = Cookies.get("useremail");
         let count=0;
         for(let c of String(userOtp))

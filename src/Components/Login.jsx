@@ -34,7 +34,7 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     setloginStatus({})
-    const API_URL = "https://otp-verification-server-6rwu.onrender.com/api/";
+    const API_URL = "https://otp-verification-mern-fl0a.onrender.com/api/";
     axios({ method: "post", url: API_URL + "login", data: user })
       .then((response) => {
         setloginStatus(response.data);

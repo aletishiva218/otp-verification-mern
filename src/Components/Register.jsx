@@ -35,7 +35,7 @@ const Register = () => {
     setRegisterStatus({});
     if(inputUser.userpassword!==inputUser.confirmpassword)
         return setRegisterStatus({status:false,message:"password not match"})
-      const API_URL = "https://otp-verification-server-6rwu.onrender.com/api/";
+      const API_URL = "https://otp-verification-mern-fl0a.onrender.com/api/";
       axios({
         method: "post",
         url: API_URL + "register",
