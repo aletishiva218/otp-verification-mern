@@ -23,7 +23,11 @@ const sendOtp = (useremail,otp) => {
     text: `Your verification code is: ${otp}`
   };
   transporter.sendMail(mailOptions, (error, info) => {
-    if (error) return res.status(500).send(error.toString());
+    if (error) {
+      console.log('Error occurred:', error.message);
+  } else {
+      console.log('Email sent:', info.response);
+  }
   });
 }
 
